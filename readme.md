@@ -24,7 +24,7 @@ Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce 
 
 [Quick Admin](/admin)
 
-## installation / execution
+## Installation / Execution
 copy EXAMPLE.env to .env and adjust
 
 pip install -r requirements.txt
