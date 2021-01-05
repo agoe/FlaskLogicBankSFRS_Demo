@@ -1,4 +1,4 @@
-# RBJAS Rule Based Jason Api Server
+# RBJAS Rule Based Json Api Server
 
 ## SARFS Api Server
 
