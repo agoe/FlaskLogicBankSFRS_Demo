@@ -18,7 +18,7 @@ Use Logic Bank to govern SQLAlchemy update transaction logic - multi-table deriv
 
 Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce your logic.
 
-## Ceckit Out
+## Check it out
 
 [Open API (Swagger)](/api)
 
