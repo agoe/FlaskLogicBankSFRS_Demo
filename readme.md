@@ -26,7 +26,9 @@ Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce 
 
 ## installation / execution
 copy EXAMPLE.env to .env and adjust
+
 pip install -r requirements.txt
+
 run run_this_app.py
 
 for SAFRS you may need the current HEAD
