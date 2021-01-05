@@ -1,0 +1,11 @@
+Flask
+Flask-Admin
+python-dateutil
+python-dotenv
+SQLAlchemy
+SQLAlchemy-Utils
+six
+email-validator
+LogicBank
+SAFRS
+
