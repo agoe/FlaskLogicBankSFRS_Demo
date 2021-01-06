@@ -25,8 +25,8 @@ Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce 
 **[Quick Admin](/admin)**
 
 **Source**
-<p>
-*Rules: [/logic/rules_bank.py](/logic/rules_bank.py)*
+
+: *Rules: [/logic/rules_bank.py](/logic/rules_bank.py)*
 
 *Enhanced Json Decoder: [api/json_encode.py](api/json_encode.py)*
 
@@ -41,7 +41,7 @@ Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce 
 *Flask Admin Custom Types:[/admin/admin_model_converter_ext.py](/admin/admin_model_converter_ext.py)*
 
 *Rules Exception Handler: [/logic/_init_.py](/logic/__init__.py)*
-</p>
+
 
 **User Email Validation:**
 
