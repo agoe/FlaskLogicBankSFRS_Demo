@@ -26,21 +26,21 @@ Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce 
 
 **Source**
 
-*[Rules:](/logic/rules_bank.py)*
+*[Rules: (/logic/rules_bank.py)](/logic/rules_bank.py)*
 
-*[Enhanced Json Decoder:](api/json_encode.py)*
+*[Enhanced Json Decoder: (api/json_encode.py)](api/json_encode.py)*
 
-*[SQLAlchemy Models:](/models)(StoreModel: Custom endpoint)*
+*[SQLAlchemy Models: (/models)](/models)(StoreModel: Custom endpoint)*
 
-*[Custom Column Types:](models/types)*
+*[Custom Column Types: (models/types)](models/types)*
 
-*[Flask App:](/app)*
+*[Flask App: (/app)](/app)*
 
-*[Enhanced Flask-Admin View:](admin/admin_view_ext) (Display Validation Errors/ LogicBank Constraints)*
+*[Enhanced Flask-Admin View: (/admin/admin_view_ext)](/admin/admin_view_ext) (Display Validation Errors/ LogicBank Constraints)*
 
-*[Flask Admin Custom Types:](admin/admin_model_converter_ext.py)*
+*[Flask Admin Custom Types: (/admin/admin_model_converter_ext.py)](/admin/admin_model_converter_ext.py)*
 
-*[Rules Exception Handler:](logic/_init_.py)*
+*[Rules Exception Handler: (/logic/_init_.py)](/logic/_init_.py)*
 
 **User Email Validation:**
 
