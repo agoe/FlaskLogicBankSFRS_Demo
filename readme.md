@@ -26,7 +26,7 @@ Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce 
 
 **Source**
 
-*   Rules: logic/rules_bank.py
+*   Rules: (/logic/rules_bank.py)
 *   Enhanced Json Decoder: api/json_encode.py
 *   SQLAlchemy Models: models(StoreModel: Custom endpoint)
 *   Custom Column Types: models/types
