@@ -31,7 +31,7 @@ Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce 
 *SQLAlchemy Models: [/models](/models) (StoreModel: Custom endpoint)*  
 *Custom Column Types: [models/types](models/types)*  
 *Flask App: [/app](/app)*  
-*Enhanced Flask-Admin View: [/admin/admin_view_ext](/admin/admin_view_ext) (Display Validation Errors/ LogicBank Constraints)*  
+*Enhanced Flask-Admin View: [/admin/admin_view_ext.py](/admin/admin_view_ext.py) (Display Validation Errors/ LogicBank Constraints)*  
 *Flask Admin Custom Types:[/admin/admin_model_converter_ext.py](/admin/admin_model_converter_ext.py)*  
 *Rules Exception Handler: [/logic/_init_.py](/logic/__init__.py)*  
 
