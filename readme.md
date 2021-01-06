@@ -20,9 +20,9 @@ Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce 
 
 ## Check it out
 
-**[Open API (Swagger)](/api)**
+**[Open API (Swagger)](/api) localhost:5000/api**
 
-**[Quick Admin](/admin)**
+**[Quick Admin](/admin) localhost:5000/admin**
 
 **Source**
 
