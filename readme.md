@@ -20,15 +20,28 @@ Logic Bank is based on SQLAlchemy - it handles `before_flush` events to enforce 
 
 ## Check it out
 
-[Open API (Swagger)](/api)
+**[Open API (Swagger)](/api)**
 
-[Quick Admin](/admin)
+**[Quick Admin](/admin)**
 
-## Installation / Execution
-copy EXAMPLE.env to .env and adjust
+**Source**
 
-pip install -r requirements.txt
+*   Rules: logic/rules_bank.py
+*   Enhanced Json Decoder: api/json_encode.py
+*   SQLAlchemy Models: models(StoreModel: Custom endpoint)
+*   Custom Column Types: models/types
+*   Flask App: app
+*   Enhanced Flask-Admin View: admin/admin_view_ext (Display Validation Errors/ LogicBank Constraints)
+*   Flask Admin Custom Types: admin/admin_model_converter_ext.py
+*   Rules Exception Handler: logic/_init_.py
 
-run run_this_app.py
+**User Email Validation:**
 
-for SAFRS you may need the current HEAD
+<pre>        if "@" not in value:  raise ValidationError("Email Validation Error {}".format(value))</pre>
+
+**Rules:**
+
+<pre>        Rule.constraint(validate=StoreModel,as_condition=lambda row: 'X' not in row.name,
+                                                error_msg="Store Names({row.name}) should not  contain X")
+        Rule.count(StoreModel.item_count, as_count_of=ItemModel)
+        Rule.parent_check(validate=ItemModel, error_msg="no parent", enable=True)</pre>

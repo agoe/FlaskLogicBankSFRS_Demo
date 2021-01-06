@@ -39,3 +39,7 @@ class AdminModelConverterExt(AdminModelConverter):
         field_args['validators'].append(validators.AnyOf(accepted_values))
         field_args['coerce'] = choice_type_coerce_factory(column.type)
         return form.Select2Field(**field_args)
+
+    @converts('models.types.email_type.EmailType')
+    def conv_email_type(self, column, field_args, **extra):
+        return super().conv_String(column, field_args, **extra)

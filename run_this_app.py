@@ -15,6 +15,7 @@
 import sys
 
 from flask import render_template
+from safrs import ValidationError
 
 import app as app
 
@@ -28,6 +29,17 @@ app = app.create_app()
 def welcome():
     return render_template('index.html')
 
+
+@app.errorhandler(ValidationError)
+def handle_exception(e: ValidationError):
+
+    res = {'code': e.status_code,
+           'errorType': 'Validation Error',
+           'errorMessage': e.message}
+#    if debug:
+#        res['errorMessage'] = e.message if hasattr(e, 'message') else f'{e}'
+
+    return res, 400
 
 @app.after_request
 def after_request(response):

@@ -1,4 +1,6 @@
 from flask_admin.contrib.sqla import ModelView
+from flask import flash
+from safrs import ValidationError
 from sqlalchemy.orm.base import instance_state
 
 from admin.admin_model_converter_ext import AdminModelConverterExt
@@ -26,3 +28,10 @@ class AdminViewExt(ModelView):
         state = instance_state(model)
         self._manager.dispatch.init(state, [], {})
         return model
+
+    def handle_view_exception(self, exc):
+        if isinstance(exc, ValidationError):
+            flash(message=exc.message, category='error')
+            return True
+
+        return super(self).handle_view_exception(exc)

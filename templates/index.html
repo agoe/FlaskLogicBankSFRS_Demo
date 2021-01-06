@@ -35,8 +35,30 @@
             <p>Logic Bank is based on SQLAlchemy - it handles <code>before_flush</code> events
             to enforce your logic.</p>
         <h2>Check it out</h2>
-        <p><a href="/api"> Open API (Swagger)</a></p>
-        <p><a href="/admin"> Quick Admin</a></p>
+        <p><strong><a href="/api"> Open API (Swagger)</a></strong></p>
+        <p><strong><a href="/admin"> Quick Admin</a></strong></p>
+        <p> <strong>Source</strong>
+            <ul>
+                <li> Rules: logic/rules_bank.py</li>
+                <li> Enhanced Json Decoder: api/json_encode.py</li>
+                <li> SQLAlchemy Models: models(StoreModel: Custom endpoint)</li>
+                <li> Custom Column Types: models/types</li>
+                <li> Flask App: app</li>
+                <li> Enhanced Flask-Admin View: admin/admin_view_ext (Display Validation Errors/ LogicBank Constraints)</li>
+                <li> Flask Admin Custom Types: admin/admin_model_converter_ext.py</li>
+                <li> Rules Exception Handler: logic/_init_.py</li>
+            </ul>
+        </p>
+        <p><strong>User Email Validation:</strong>
+        <pre>
+        if "@" not in value:  raise ValidationError("Email Validation Error {}".format(value))</pre></p>
+        <p><strong> Rules:</strong>
+        <pre>
+        Rule.constraint(validate=StoreModel,as_condition=lambda row: 'X' not in row.name,
+                                                error_msg="Store Names({row.name}) should not  contain X")
+        Rule.count(StoreModel.item_count, as_count_of=ItemModel)
+        Rule.parent_check(validate=ItemModel, error_msg="no parent", enable=True)</pre>
+        </p>
     </div>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
